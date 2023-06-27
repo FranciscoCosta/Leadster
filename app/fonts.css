@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: bold;
+    src: url('../public/fonts/PlusJakartaSans-Bold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: bold italic;
+    src: url('../public/fonts/PlusJakartaSans-BoldItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 800;
+    src: url('../public/fonts/PlusJakartaSans-ExtraBold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 800 italic;
+    src: url('../public/fonts/PlusJakartaSans-ExtraBoldItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 200;
+    src: url('../public/fonts/PlusJakartaSans-ExtraLight.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 200 italic;
+    src: url('../public/fonts/PlusJakartaSans-ExtraLightItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: normal;
+    src: url('../public/fonts/PlusJakartaSans-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 300;
+    src: url('../public/fonts/PlusJakartaSans-Light.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 300 italic;
+    src: url('../public/fonts/PlusJakartaSans-LightItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
+    src: url('../public/fonts/PlusJakartaSans-Medium.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500 italic;
+    src: url('../public/fonts/PlusJakartaSans-MediumItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: normal;
+    src: url('../public/fonts/PlusJakartaSans-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600;
+    src: url('../public/fonts/PlusJakartaSans-SemiBold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600 italic;
+    src: url('../public/fonts/PlusJakartaSans-SemiBoldItalic.ttf') format('truetype');
+  }
+  
