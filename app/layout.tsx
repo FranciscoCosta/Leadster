@@ -15,8 +15,8 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className="relative">
         {children}
-        </body>
-        <Footer/>
+      </body>
+      <Footer />
     </html>
   )
 }

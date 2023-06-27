@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { ImLinkedin2, ImFacebook } from "react-icons/im";
+import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -12,47 +14,94 @@ const Footer = () => {
           alt="leadster"
           className="logo"
         />
-        <p>Transformando visitantes em clientes.</p>
+        <p className="Title__text">Transformando visitantes em clientes.</p>
       </div>
       <div className="Footer__body">
         <div className="Footer__collum">
-          <div className="Footer__titles">
-            <h3>Links Principais</h3>
+          <div className="Footer__title-container">
+            <h3 className="Footer__title">Links Principais</h3>
           </div>
           <div className="Footer__links">
-            <a href="/">Home</a>
-            <a href="/">Ferramenta</a>
-            <a href="/">Preços</a>
-            <a href="/">Contato</a>
+            <a href="/" className="Footer__text">
+              Home
+            </a>
+            <a href="/" className="Footer__text">
+              Ferramenta
+            </a>
+            <a href="/" className="Footer__text">
+              Preços
+            </a>
+            <a href="/" className="Footer__text">
+              Contato
+            </a>
           </div>
         </div>
         <div className="Footer__collum">
-        <div className="Footer__titles">
-            <h3>Cases</h3>
+          <div className="Footer__title-container">
+            <h3 className="Footer__title">Cases</h3>
           </div>
           <div className="Footer__links">
-            <a href="/">Geração de Leads B2B</a>
-            <a href="/">Geração de Leads em Software</a>
-            <a href="/">Geração de Leads em Imobiliária</a>
-            <a href="/">Cases de Sucesso</a>
+            <a href="/" className="Footer__text">
+              Geração de Leads B2B
+            </a>
+            <a href="/" className="Footer__text">
+              Geração de Leads em Software
+            </a>
+            <a href="/" className="Footer__text">
+              Geração de Leads em Imobiliária
+            </a>
+            <a href="/" className="Footer__text">
+              Cases de Sucesso
+            </a>
           </div>
         </div>
         <div className="Footer__collum">
-        <div className="Footer__titles">
-            <h3>Materiais</h3>
+          <div className="Footer__title-container">
+            <h3 className="Footer__title">Materiais</h3>
           </div>
           <div className="Footer__links">
-            <a href="/">Blog</a>
-            <a href="/">Parceria com Agências</a>
-            <a href="/">Guia Definitivo do Marketing</a>
-            <a href="/">Materiais Gratuitos</a>
+            <a href="/" className="Footer__text">
+              Blog
+            </a>
+            <a href="/" className="Footer__text">
+              Parceria com Agências
+            </a>
+            <a href="/" className="Footer__text">
+              Guia Definitivo do Marketing
+            </a>
+            <a href="/" className="Footer__text">
+              Materiais Gratuitos
+            </a>
           </div>
         </div>
-        <div className="Footer__socials">
-
+        <div className="Footer__collum">
+          <div className="Footer__title-container">
+            <h3 className="Footer__title">Siga a Leadster</h3>
+          </div>
+          <div className="Footer__socials">
+            <div className="social__container">
+              <ImLinkedin2 className="svg-social" />
+            </div>
+            <div className="social__container">
+              <ImFacebook className="svg-social" />
+            </div>
+            <div className="social__container">
+              <BsInstagram className="svg-social" />
+            </div>
+          </div>
+          <div className="Footer__contact-info">
+            <span className="contact__label">E-mail: <p className="Footer__text">contato@leadster.com.br</p></span>
+            <span className="contact__label">Telefone: <p className="Footer__text"> (42) 98828-9851</p></span>
+          </div>
         </div>
       </div>
-      <div className="Footer__copyrights"></div>
+      <div className="Footer__line"/>
+      <div className="Footer__copyrights">
+        <p >
+          Copyright © 2015 - 2022 Todos os direitos reservados| <a className="text-custom-blue "href="https://www.leadster.com.br" target="_blank">Leadster </a>
+        </p>
+        <p>Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 |Termos de uso |</p>
+      </div>
     </div>
   );
 };
