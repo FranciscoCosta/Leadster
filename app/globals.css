@@ -2,9 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
+
+.bg-custom-blue {
+  background-color: #f0f8ff;
+}
+
+.border-custom-blue {
+  border-color: #2563eb;
+}
+
+.text-custom-blue {
+  color: #2563eb;
+}
+
+.text-color-grey {
+  color: #274659;
+}
+
+.text-gradient-title {
+  background: #2c83fb;
+  background: linear-gradient(to right, #2c83fb -45%, #1f76f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* class hero section */
+.hero {
+  @apply flex flex-col w-screen max-h-max;
+}
+
+.logo{
+  @apply h-auto w-[100px] md:w-[150px] lg:w-[200px]
+}
+
+.hero__top {
+  @apply flex items-center justify-center;
+}
+
+.hero__bottom {
+  @apply flex flex-col items-center justify-center h-60 md:h-72 lg:h-96 bg-custom-blue px-4 text-center;
+}
+
+.bubble {
+  @apply text-[11px] md:text-[12px] lg:text-[15px]  uppercase font-extrabold py-1 px-4 border-2 rounded-t-2xl rounded-br-2xl;
+}
+
+.hero__sub-title {
+  @apply  text-[27px] md:text-[30px] lg:text-[40px] leading-none font-medium capitalize text-teal-900 mt-2 md:mt-4 lg:mt-6; 
+}
+
+.hero__title{
+  @apply relative w-max h-max p-0;
+}
+
+.title{
+  @apply  text-[40px] md:text-[60px] lg:text-[80px] font-extrabold px-4;
+}
+
+.hero__asset{
+  @apply absolute top-3 md:top-5 right-3 lg:right-1 h-auto w-[15px] md:w-[20px] lg:w-[32px];
+}
+
+.line{
+  @apply h-[1px] max-w-full border-[1px] border-gray-300;
+}
+
+.hero__cto{
+  @apply text-[12px] md:text-[15px] lg:text-[16px] font-medium text-center mt-2 md:mt-4 lg:mt-6;
+}
+
+.hero__bold{
+  @apply font-bold;
+}
+/* class hero section */
