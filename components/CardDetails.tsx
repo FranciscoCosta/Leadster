@@ -64,7 +64,7 @@ const CardDetails = ({ isOpen, closeModal, card }: CardDetailsProps) => {
                     <div className="Description">
                       <h4 className="Modal__title text-color-black font-bold text-lg">Descrição</h4>
                       <div className="line__modal" />
-                      <p className="Description__text text-base text-color-black">{card.description}</p>
+                      <p className="Description__text text-base text-color-black text-start">{card.description}</p>
                     </div>
                     <div className="Dowloads">
                       <h4 className="Modal__title text-color-black font-bold text-lg" >Downloads</h4>
