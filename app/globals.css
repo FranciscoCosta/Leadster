@@ -265,6 +265,10 @@
 .Filter__select{
   @apply flex flex-row items-center justify-center mt-8 md:mt-8 lg:mt-0 2xl:mt-0;
 }
+
+.line__filter{
+  @apply h-[1px] w-[100%] border-[1px] border-gray-300 mt-6;
+}
 /* main content section */
 
 /* class footer section */

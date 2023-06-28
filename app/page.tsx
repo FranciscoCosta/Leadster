@@ -31,9 +31,7 @@ export default function Home() {
               <CustomSelect />
             </div>
           </div>
-          <div className='line__filter'>
-
-          </div>
+          <div className='line__filter'/>
 
         </div>
       </div>
