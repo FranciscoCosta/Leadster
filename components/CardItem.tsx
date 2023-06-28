@@ -23,7 +23,7 @@ const CardItem = ({ card }: CardItemProps) => {
 
     const { title, date, description, tumbnail, tags, link } = card;
     return (
-        <div className='Card__container group' onClick={handleClick}
+        <div className='Card__container group mb-4' onClick={handleClick}
         >
             <div className="Card__container-top">
                 <Image src={tumbnail} alt={title} fill className='object-cover' />

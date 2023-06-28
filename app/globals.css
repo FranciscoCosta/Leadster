@@ -216,6 +216,13 @@
   background-color: #dfb3045e;
   height: 100%
 }
+
+.active-page{
+  border: 1px solid #0183ff;
+  padding: 2px 10px;
+  color: #0183ff;
+  border-radius: 5px;
+}
 /* class hero section */
 .hero {
   @apply flex flex-col w-screen max-h-max;

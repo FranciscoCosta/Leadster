@@ -2,7 +2,7 @@
 
 import { mockDataItem } from "../types/index"
 import React, { useState, useEffect } from 'react';
-import { Hero, Reviews, CustomFilter, CardItem } from '@/components';
+import { Hero, Reviews, CustomFilter, CardItem, Pagination } from '@/components';
 
 import datamock from '../public/cards.json';
 
@@ -17,9 +17,16 @@ export default function Home() {
   const [activeFilter, setActiveFilter] = useState('');
   const [data, setActiveData] = useState<mockDataItem[]>([]);
   const [filteredData, setFilteredData] = useState<mockDataItem[]>([]);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const cardsPerPage = 9;
+  const lastCardIndex = currentPage * cardsPerPage;
+  const firstCardIndex = lastCardIndex - cardsPerPage;
+  const currentCards = filteredData.slice(firstCardIndex, lastCardIndex);
+
 
   const handleClick = (title: string) => {
     setActiveFilter(title);
+    setCurrentPage(1)
     if (title === 'Agências') {
       setFilteredData(data.filter((item) => item.tags.includes('Agências')));
     }
@@ -40,11 +47,11 @@ export default function Home() {
     }
     if (title === 'recent') {
       setFilteredData(filteredData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
-    console.log(filteredData)
+      console.log(filteredData)
     }
     if (title === 'oldest') {
       setFilteredData(filteredData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()));
-    console.log(filteredData)
+      console.log(filteredData)
     }
   };
 
@@ -75,9 +82,12 @@ export default function Home() {
           <div className='line__filter' />
           <div className='Cards__container'>
             {
-              filteredData?.map((card) => <CardItem card={card} />)
+              currentCards?.map((card) => <CardItem card={card} />)
+
             }
           </div>
+            <div className="line__filter"/>
+          <Pagination cardsPerPage={cardsPerPage} totalCards={filteredData.length} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
         </div>
       </div>
       <Reviews />
