@@ -1,19 +1,21 @@
 "use client"
 
-import Image from 'next/image'
+import { mockDataItem } from "../types/index"
 import React, { useState, useEffect } from 'react';
-import { Hero, Reviews, CustomFilter, CustomSelect } from '@/components';
+import { Hero, Reviews, CustomFilter, CustomSelect, CardItem } from '@/components';
 
-import data from '../public/cards.json';
+import datamock from '../public/cards.json';
 
 export default function Home() {
 
   useEffect(() => {
-    setActiveData(data)
+
+    setActiveData(datamock as mockDataItem[])
   }, []);
 
   const [activeFilter, setActiveFilter] = useState('');
-  const [data, setActiveData] = useState(null);
+  const [data, setActiveData] = useState<mockDataItem[]>([]);
+  
   const handleClick = (title : string) => {
     setActiveFilter(title);
   };
@@ -37,7 +39,11 @@ export default function Home() {
             </div>
           </div>
           <div className='line__filter'/>
-
+          <div className='Cards__container'>
+            {
+              data?.map((card)=> <CardItem card={card} />)
+            }
+          </div>
         </div>
       </div>
       <Reviews />

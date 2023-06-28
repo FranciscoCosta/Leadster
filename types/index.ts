@@ -5,3 +5,12 @@ export interface CustomFilterProps {
     isActive: boolean;
     handleClick: MouseEventHandler<HTMLButtonElement>;
 }
+
+export interface mockDataItem {
+    title : string;
+    date: string;
+    description: string;
+    link: string;
+    tags: string[];
+    tumbnail: string;
+}
