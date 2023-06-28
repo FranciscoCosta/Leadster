@@ -14,3 +14,8 @@ export interface mockDataItem {
     tags: string[];
     tumbnail: string;
 }
+
+export interface downloadBtn {
+    title: string;
+    containerStyles : string;
+}
