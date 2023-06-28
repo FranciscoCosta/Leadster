@@ -47,7 +47,7 @@
 }
 
 .social__container:hover {
-  background-color: #1f76f0;
+  background-color: #0dcaf0;
 }
 
 .social__container:hover .svg-social {
@@ -57,7 +57,7 @@
 .svg-social {
   width: 15px;
   height: 15px;
-  color: #858da8;
+  color: #677294;
   transition: all 0.3s ease-in-out;
 }
 /* class hero section */

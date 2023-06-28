@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { ImLinkedin2, ImFacebook } from "react-icons/im";
@@ -79,28 +81,66 @@ const Footer = () => {
             <h3 className="Footer__title">Siga a Leadster</h3>
           </div>
           <div className="Footer__socials">
-            <div className="social__container">
+            <div
+              className="social__container"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/company/leadster/",
+                  "_blank"
+                )
+              }
+            >
               <ImLinkedin2 className="svg-social" />
             </div>
-            <div className="social__container">
+            <div
+              className="social__container"
+              onClick={() =>
+                window.open(
+                  "https://www.facebook.com/leadsterplatform",
+                  "_blank"
+                )
+              }
+            >
               <ImFacebook className="svg-social" />
             </div>
-            <div className="social__container">
+            <div
+              className="social__container"
+              onClick={() =>
+                window.open(
+                  "https://www.instagram.com/leadster.com.br/",
+                  "_blank"
+                )
+              }
+            >
               <BsInstagram className="svg-social" />
             </div>
           </div>
           <div className="Footer__contact-info">
-            <span className="contact__label">E-mail: <p className="Footer__text">contato@leadster.com.br</p></span>
-            <span className="contact__label">Telefone: <p className="Footer__text"> (42) 98828-9851</p></span>
+            <span className="contact__label">
+              E-mail: <p className="Footer__text">contato@leadster.com.br</p>
+            </span>
+            <span className="contact__label">
+              Telefone: <p className="Footer__text"> (42) 98828-9851</p>
+            </span>
           </div>
         </div>
       </div>
-      <div className="Footer__line"/>
+      <div className="Footer__line" />
       <div className="Footer__copyrights">
-        <p >
-          Copyright © 2015 - 2022 Todos os direitos reservados| <a className="text-custom-blue "href="https://www.leadster.com.br" target="_blank">Leadster </a>
+        <p>
+          Copyright © 2015 - 2022 Todos os direitos reservados|{" "}
+          <a
+            className="text-custom-blue "
+            href="https://www.leadster.com.br"
+            target="_blank"
+          >
+            Leadster{" "}
+          </a>
         </p>
-        <p>Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 |Termos de uso |</p>
+        <p>
+          Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 |Termos
+          de uso |
+        </p>
       </div>
     </div>
   );
