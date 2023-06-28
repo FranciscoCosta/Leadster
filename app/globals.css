@@ -90,6 +90,45 @@
   margin-right: 1rem;
 }
 
+.custom-btn-filter{
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #1c3c50;
+  color: #1c3c50;
+  padding: 5px 15px;
+  font-size: 20px;
+  min-width: 100px;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+  margin-right: 1rem;
+
+}
+
+.custom-btn-filter:hover{
+  border: 1px solid #0183ff;
+  color: #0183ff;
+}
+
+.btn-filter-active{
+  border: 1px solid white;
+  transition: all 0.3s ease-in-out;
+  background-color: #0183ff;
+  color: white;
+}
+
+.btn-filter-active:hover{
+  color: white;
+}
+
+.custom-select-filter{
+  border: 1px solid #1c3c50;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+
 /* class hero section */
 .hero {
   @apply flex flex-col w-screen max-h-max;
@@ -202,6 +241,31 @@
 
 
 /* reviews section */
+
+/* Content section */
+.Content{
+  @apply mt-12 w-screen  h-max;
+
+}
+
+.Content__container{
+  @apply flex flex-col items-center mx-auto justify-center w-[70%] h-full mb-4;
+}
+
+.Content__filters{
+  @apply flex flex-col justify-center items-center lg:flex-row 2xl:flex-row  w-[100%] lg:justify-between
+}
+
+.Content__btn{
+  @apply flex flex-row gap-2 flex-wrap items-center justify-center
+}
+
+
+/* main content section */
+.Filter__select{
+  @apply flex flex-row items-center justify-center mt-8 md:mt-8 lg:mt-0 2xl:mt-0;
+}
+/* main content section */
 
 /* class footer section */
 .Footer {
