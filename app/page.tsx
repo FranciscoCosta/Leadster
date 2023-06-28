@@ -1,14 +1,19 @@
 "use client"
 
 import Image from 'next/image'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Hero, Reviews, CustomFilter, CustomSelect } from '@/components';
 
 import data from '../public/cards.json';
 
 export default function Home() {
 
+  useEffect(() => {
+    setActiveData(data)
+  }, []);
+
   const [activeFilter, setActiveFilter] = useState('');
+  const [data, setActiveData] = useState(null);
   const handleClick = (title : string) => {
     setActiveFilter(title);
   };
