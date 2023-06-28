@@ -67,8 +67,8 @@
 
 .bg__shape {
   position: absolute;
-  top: 130px;
-  left: -140px;
+  top: 150px;
+  left: -200px;
   background-color: #e1f3fe;
   height: 1000px;
   width: 870px;
@@ -276,7 +276,7 @@
 /* reviews section */
 
 .Reviews {
-  @apply flex flex-col lg:flex-row md:flex-row  items-center justify-center h-[600px] md:h-[600px] lg:h-96 bg-custom-blue text-center;
+  @apply flex flex-col lg:flex-row md:flex-row  items-center justify-center h-[600px] md:h-[600px] lg:h-[600px] bg-custom-blue text-center;
 }
 
 .image__container {
@@ -292,14 +292,14 @@
 }
 
 .Review__sub-title {
-  @apply text-[20px] md:text-[25px] lg:text-[30px] font-medium  leading-8 overflow-hidden text-center text-color-black;
+  @apply text-[25px] md:text-[30px] lg:text-[35px] font-medium  leading-10 overflow-hidden text-center text-color-black;
 }
 
 .Review__title {
-  @apply text-[20px] md:text-[25px] lg:text-[30px] font-bold leading-10 overflow-hidden text-center text-color-black;
+  @apply text-[25px] md:text-[30px] lg:text-[35px] font-bold leading-10 overflow-hidden text-center text-color-black;
 }
 .Review__text-title {
-  @apply text-[10px] md:text-[15px] lg:text-[20px] font-normal leading-8 overflow-hidden text-center text-color-black;
+  @apply text-[15px] md:text-[20px] lg:text-[25px] font-normal leading-10 overflow-hidden text-center text-color-black;
 }
 
 .Review__line {
