@@ -91,6 +91,15 @@
   border: 1px solid #0183ff;
 }
 
+@media screen and (max-width: 768px) {
+  .btn-demo {
+    font-size: 12px;
+    height: 40px;
+    margin-right: 0.25rem;
+  }
+}
+
+
 .btn-demo:hover {
   background-color: white;
   border: 1px solid #0183ff;
@@ -109,6 +118,15 @@
   transition: all 0.3s ease-in-out;
   margin-right: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .custom-btn-filter {
+    font-size: 12px;
+    margin-right: 0.25rem;
+    min-width: 80px;
+  }
+}
+  
 
 .custom-btn-filter:hover {
   border: 1px solid #0183ff;
@@ -133,6 +151,14 @@
   border-radius: 10px;
   font-size: 1.2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .custom-select-filter {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}
+
 
 .Card__container:hover .overlay__bg {
   display: block;
@@ -333,7 +359,7 @@
 
 /* Content section */
 .Content {
-  @apply mt-12 w-screen  h-max;
+  @apply mt-4 md:mt-12 w-screen h-max;
 }
 
 .Content__container {
@@ -350,7 +376,7 @@
 
 /* main content section */
 .Filter__select {
-  @apply flex flex-row items-center flex-wrap gap-4 justify-center mt-8 md:mt-8 lg:mt-0 2xl:mt-0;
+  @apply flex flex-row items-center flex-wrap gap-1 md:gap-4 justify-center mt-4 md:mt-8 lg:mt-0 2xl:mt-0;
 }
 
 .line__filter {

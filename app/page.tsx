@@ -121,7 +121,7 @@ export default function Home() {
               <div className="Filter__select">
                 <label
                   htmlFor="orderby"
-                  className="font-bold text-color-black mr-4"
+                  className="font-bold text-color-black mr-4 sm:text-sm md:text-lg"
                 >
                   Ordenar por:
                 </label>
