@@ -45,7 +45,7 @@ const CardDetails = ({ isOpen, closeModal, card }: CardDetailsProps) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white p-6 text-left shadow-xl transition-all flex flex-col gap-5 border-t-4 border-blue-500 overflow-hidden">
+                <Dialog.Panel className="relative w-[110%] max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white py-6 text-left shadow-xl transition-all flex flex-col gap-5 border-t-4 border-blue-500 overflow-hidden">
                   <button
                     type="button"
                     className="absolute top-2 right-2 z-10 w-fit p-2rounded-full "
@@ -54,20 +54,20 @@ const CardDetails = ({ isOpen, closeModal, card }: CardDetailsProps) => {
                     <AiOutlineClose />
                   </button>
                   <div className="flex-1 flex flex-col gap-3 text-center">
-                    <h2 className="text-custom-dark font-normal text-2xl w-[80%] self-center overflow-hidden">
-                      <span className="text-custom-blue font-bold text-2xl overflow-hidden">Webinar: </span>
+                    <h2 className="text-custom-dark font-normal md:text-2xl sm:text-xs w-[80%] self-center overflow-hidden md:leading-8 sm:leading-3 min-h-[70px] sm:mb-0 md:mb-6">
+                      <span className="text-custom-blue font-bold md:text-2xl sm:text-xs overflow-hidden">Webinar: </span>
                       {card.title}
                     </h2>
-                    <div>
-                      <ReactPlayer url={card.link} />
+                    <div className="h-[300px] md:h-[400px]">
+                      <ReactPlayer url={card.link} width='100%' height='100%' />
                     </div>
-                    <div className="Description">
+                    <div className="Description px-4">
                       <h4 className="Modal__title text-color-black font-bold text-lg">Descrição</h4>
                       <div className="line__modal" />
                       <p className="Description__text text-base text-color-black text-start">{card.description}</p>
                     </div>
-                    <div className="Dowloads">
-                      <h4 className="Modal__title text-color-black font-bold text-lg" >Downloads</h4>
+                    <div className="Dowloads px-4 h-max">
+                      <h4 className="Modal__title text-color-black font-bold text-lg overflow-hidden" >Downloads</h4>
                       <div className="line__modal" />
                       <div className="Dowload__container-btn">
                         <CustomDowloadBtn
