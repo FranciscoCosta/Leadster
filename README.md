@@ -16,7 +16,7 @@ Este projeto consiste na criação de uma landing page utilizando o framework Ne
 
 A estrutura do código deste projeto segue uma abordagem organizada e modular, visando facilitar a manutenção, a escalabilidade e a compreensão do projeto.
 
-##Componentização
+Componentização
 A landing page foi componentizada em quatro componentes principais:
 
 **Hero :**
