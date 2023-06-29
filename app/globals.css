@@ -138,6 +138,7 @@
   display: block;
 }
 
+
 .Card__container:hover .card__title {
   font-weight: 600;
   color: #0183ff;
@@ -362,7 +363,7 @@
 }
 
 .Card__container {
-  @apply relative flex flex-col justify-center items-start shadow-md rounded-lg;
+  @apply relative flex flex-col justify-center items-start shadow-md hover:shadow-xl rounded-lg;
 }
 
 .Card__container-top {
