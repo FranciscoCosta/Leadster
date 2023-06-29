@@ -8,6 +8,8 @@ const CustomFilter = ({title, handleClick, isActive} : CustomFilterProps ) => {
     type='button'
     className={`custom-btn-filter ${isActive ? 'btn-filter-active' : ''}`}
     onClick={handleClick}
+    data-testid={`filter-btn-${title}`}
+    
     >
       <span className={`flex-1`}>
         {title}
