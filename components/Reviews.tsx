@@ -2,17 +2,23 @@
 
 import React from 'react'
 import Image from 'next/image';
-
+import { motion } from "framer-motion"
 const Reviews = () => {
     return (
         <div className='Reviews'>
-            <div className='Review__left sides'>
-                    <div className="image__container">
-                        <Image src={'/images/comparativo_img_CTA.png'} fill className='object-contain' alt={'comparativo_img_CTA'} />
-                    </div>
-                    <div className='bg__shape'></div>
-            </div>
-            <div className='Review__right sides'>
+            <motion.div
+                whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+                transition={{ duration: 0.8 }}
+                className='Review__left sides'>
+                <div className="image__container">
+                    <Image src={'/images/comparativo_img_CTA.png'} fill className='object-contain' alt={'comparativo_img_CTA'} />
+                </div>
+                <div className='bg__shape'></div>
+            </motion.div>
+            <motion.div
+                whileInView={{ x: [100, 0], opacity: [0, 1] }}
+                transition={{ duration: 0.8 }}
+                className='Review__right sides'>
                 <div className="Review__right-top">
                     <h1 className='Review__sub-title'>Pronto para triplicar sua</h1>
                     <h1 className='Review__title'>Geração de Leads?</h1>
@@ -43,7 +49,7 @@ const Reviews = () => {
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

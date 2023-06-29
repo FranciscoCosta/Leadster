@@ -3,7 +3,7 @@
 import { mockDataItem } from "../types/index"
 import React, { useState, useEffect } from 'react';
 import { Hero, Reviews, CustomFilter, CardItem, Pagination } from '@/components';
-
+import {motion} from "framer-motion";
 import datamock from '../public/cards.json';
 
 export default function Home() {
@@ -15,6 +15,7 @@ export default function Home() {
   }, []);
 
   const [activeFilter, setActiveFilter] = useState('');
+  const [animatedCard, setAnimatedCard] = useState<{ y: number; opacity: number }>({ y: 0, opacity: 1 });
   const [data, setActiveData] = useState<mockDataItem[]>([]);
   const [filteredData, setFilteredData] = useState<mockDataItem[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -27,32 +28,38 @@ export default function Home() {
   const handleClick = (title: string) => {
     setActiveFilter(title);
     setCurrentPage(1)
-    if (title === 'Agências') {
-      setFilteredData(data.filter((item) => item.tags.includes('Agências')));
-    }
-    if (title === 'Chatbot') {
-      setFilteredData(data.filter((item) => item.tags.includes('Chatbot')));
-    }
-    if (title === 'Marketing Digital') {
-      setFilteredData(data.filter((item) => item.tags.includes('Marketing Digital')));
-    }
-    if (title === 'Geração de Leads') {
-      setFilteredData(data.filter((item) => item.tags.includes('Geração de Leads')));
-    }
-    if (title === 'Mídia Paga') {
-      setFilteredData(data.filter((item) => item.tags.includes('Mídia Paga')));
-    }
-    if (title === '') {
-      setFilteredData(data);
-    }
-    if (title === 'recent') {
-      setFilteredData(filteredData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
-      console.log(filteredData)
-    }
-    if (title === 'oldest') {
-      setFilteredData(filteredData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()));
-      console.log(filteredData)
-    }
+    setAnimatedCard([{ y: 100, opacity: 0 }]);
+
+    setTimeout(() => {
+      setAnimatedCard([{ y: 0, opacity: 1 }]);
+
+      if (title === 'Agências') {
+        setFilteredData(data.filter((item) => item.tags.includes('Agências')));
+      }
+      if (title === 'Chatbot') {
+        setFilteredData(data.filter((item) => item.tags.includes('Chatbot')));
+      }
+      if (title === 'Marketing Digital') {
+        setFilteredData(data.filter((item) => item.tags.includes('Marketing Digital')));
+      }
+      if (title === 'Geração de Leads') {
+        setFilteredData(data.filter((item) => item.tags.includes('Geração de Leads')));
+      }
+      if (title === 'Mídia Paga') {
+        setFilteredData(data.filter((item) => item.tags.includes('Mídia Paga')));
+      }
+      if (title === '') {
+        setFilteredData(data);
+      }
+      if (title === 'recent') {
+        setFilteredData(filteredData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
+        console.log(filteredData)
+      }
+      if (title === 'oldest') {
+        setFilteredData(filteredData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()));
+        console.log(filteredData)
+      }
+    }, 500)
   };
 
   return (
@@ -80,14 +87,15 @@ export default function Home() {
             </div>
           </div>
           <div className='line__filter' />
-          <div className='Cards__container'>
+          <motion.div className='Cards__container' animate={animatedCard}
+            transition={{ duration: 0.5, delayChildren: 0.5 }}>
             {
               currentCards?.map((card) => <CardItem card={card} />)
 
             }
-          </div>
-            <div className="line__filter"/>
-          <Pagination cardsPerPage={cardsPerPage} totalCards={filteredData.length} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
+          </motion.div>
+          <div className="line__filter" />
+          <Pagination cardsPerPage={cardsPerPage} totalCards={filteredData.length} setCurrentPage={setCurrentPage} currentPage={currentPage} />
         </div>
       </div>
       <Reviews />
