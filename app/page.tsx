@@ -12,6 +12,11 @@ import {
 import { motion } from "framer-motion";
 import datamock from "../public/cards.json";
 
+interface AnimatedCardProps {
+  y: number;
+  opacity: number;
+}
+
 export default function Home() {
   useEffect(() => {
     setActiveData(datamock as mockDataItem[]);
@@ -19,10 +24,7 @@ export default function Home() {
   }, []);
 
   const [activeFilter, setActiveFilter] = useState("");
-  const [animatedCard, setAnimatedCard] = useState<{
-    y: number;
-    opacity: number;
-  }>({ y: 0, opacity: 1 });
+  const [animatedCard, setAnimatedCard] = useState<AnimatedCardProps[]>({ y: 0, opacity: 1 });
   const [data, setActiveData] = useState<mockDataItem[]>([]);
   const [filteredData, setFilteredData] = useState<mockDataItem[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -139,9 +141,9 @@ export default function Home() {
             </div>
           </div>
           <div className="line__filter" />
-          <motion.div
+          <motion.div 
             className="Cards__container"
-            animate={animatedCard}
+            animate={animatedCard as unknown as any}
             transition={{ duration: 0.5, delayChildren: 0.5 }}
           >
             {currentCards?.map((card, index) => (
