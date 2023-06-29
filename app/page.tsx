@@ -24,7 +24,7 @@ export default function Home() {
   }, []);
 
   const [activeFilter, setActiveFilter] = useState("");
-  const [animatedCard, setAnimatedCard] = useState<AnimatedCardProps[]>({ y: 0, opacity: 1 });
+  const [animatedCard, setAnimatedCard] = useState<AnimatedCardProps>({ y: 0, opacity: 1 });
   const [data, setActiveData] = useState<mockDataItem[]>([]);
   const [filteredData, setFilteredData] = useState<mockDataItem[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -36,10 +36,10 @@ export default function Home() {
   const handleClick = (title: string) => {
     setActiveFilter(title);
     setCurrentPage(1);
-    setAnimatedCard([{ y: 100, opacity: 0 }]);
+    setAnimatedCard([{ y: 100, opacity: 0 }] as unknown as any);
 
     setTimeout(() => {
-      setAnimatedCard([{ y: 0, opacity: 1 }]);
+      setAnimatedCard([{ y: 0, opacity: 1 }] as unknown as any);
 
       if (title === "Agências") {
         setFilteredData(data.filter((item) => item.tags.includes("Agências")));
