@@ -32,10 +32,10 @@ const CardDetails = ({ isOpen, closeModal, card }: CardDetailsProps) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-25" />
+            <div className="fixed inset-0 bg-black bg-opacity-25 overflow-hidden" />
           </Transition.Child>
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+          <div className="fixed inset-0 overflow-y-auto ">
+            <div className="flex min-h-full items-center justify-center p-4 text-center overflow-hidden">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -45,17 +45,17 @@ const CardDetails = ({ isOpen, closeModal, card }: CardDetailsProps) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white p-6 text-left shadow-xl transition-all flex flex-col gap-5 border-t-4 border-blue-500">
+                <Dialog.Panel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white p-6 text-left shadow-xl transition-all flex flex-col gap-5 border-t-4 border-blue-500 overflow-hidden">
                   <button
                     type="button"
-                    className="absolute top-2 right-2 z-10 w-fit p-2rounded-full"
+                    className="absolute top-2 right-2 z-10 w-fit p-2rounded-full "
                     onClick={closeModal}
                   >
                     <AiOutlineClose />
                   </button>
                   <div className="flex-1 flex flex-col gap-3 text-center">
-                    <h2 className="text-custom-dark font-normal text-2xl w-[80%] self-center">
-                      <span className="text-custom-blue font-bold text-2xl">Webinar: </span>
+                    <h2 className="text-custom-dark font-normal text-2xl w-[80%] self-center overflow-hidden">
+                      <span className="text-custom-blue font-bold text-2xl overflow-hidden">Webinar: </span>
                       {card.title}
                     </h2>
                     <div>

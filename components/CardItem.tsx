@@ -32,8 +32,8 @@ const CardItem = ({ card }: CardItemProps) => {
                 </div>
 
             </div>
-            <div className="Card__container-bottom">
-                <h2 className='text-color-black px-6 py-4 font-bold text-[20px] card__title '>{title}</h2>
+            <div className="Card__container-bottom overflow-hidden">
+                <h2 className='text-color-black px-6 py-4 font-bold md:text-[20px] sm:text-[15px] card__title'>{title}</h2>
             </div>
 
         <CardDetails isOpen={isOpen} closeModal={() => setisOpen(false)} card ={card} />
