@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Estrutura do código
 
-First, run the development server:
+A estrutura do código deste projeto segue uma abordagem organizada e modular, visando facilitar a manutenção, a escalabilidade e a compreensão do projeto.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+##Componentização
+A landing page foi componentizada em quatro componentes principais:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Hero :**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este componente é responsável por exibir o cabeçalho da página, com um título e o call to action.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Content :**
 
-## Learn More
+O componente Content é responsável por exibir o conteúdo principal da página. Aqui, são exibidos os filtros os cards e os modals.
 
-To learn more about Next.js, take a look at the following resources:
+**Reviews :**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+O componente Reviews é responsável por exibir as avaliações.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Footer :**
 
-## Deploy on Vercel
+O componente Footer é responsável por exibir o rodapé da página.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Nomenclatura BEM
+Foi adotada a nomenclatura BEM (Block, Element, Modifier) na escolha dos nomes das classes CSS. A nomenclatura BEM é uma convenção que ajuda a manter a consistência e a clareza no código CSS.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Testes
+Os testes foram separados por componente e por página, facilitando a manutenção e a execução dos testes.
+
+Essa estrutura modular e organizada contribuiu para um código mais legível, reutilizável e fácil de dar manutenção. Ao dividir a landing page em componentes independentes, é possível modificar ou adicionar funcionalidades específicas sem afetar outras partes do projeto. Isso resulta em um desenvolvimento mais eficiente e uma melhor experiência de usuário.
