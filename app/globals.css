@@ -182,18 +182,12 @@
   width: 100%;
   background-color: rgba(1, 131, 255, 0.5);
 }
-
-.play-button {
-  z-index: 100;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-top: 30px solid transparent;
-  border-left: 50px solid white;
-  border-bottom: 30px solid transparent;
+.play-button{
+  color: #fff;
+  width: 100%;
+  font-size: 9rem;
+  text-align: center;
+  padding-top: 3rem;
 }
 
 .Green__container {

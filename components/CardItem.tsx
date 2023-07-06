@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import { BsFillPlayFill } from "react-icons/bs";
 
 import CardDetails from './CardDetails'
 import { mockDataItem } from '@/types'
@@ -28,7 +29,7 @@ const CardItem = ({ card }: CardItemProps) => {
             <div className="Card__container-top">
                 <Image src={tumbnail} alt={title} fill className='object-cover' />
                 <div className='overlay__bg'>
-                    <div className='play-button'></div>
+                    <BsFillPlayFill className="play-button" />
                 </div>
 
             </div>
